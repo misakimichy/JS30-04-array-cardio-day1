@@ -80,13 +80,14 @@ const reduceSumDupli = data.reduce((obj, item) => {
 }, {})
 console.log(reduceSumDupli);
 
-//  8. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
-// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-//   const category = document.querySelector(".mw-category");
-//   // Select all a tags from the existing element (category) in array.
-//   const links = [...category.querySelectorAll("a")];
+// 8. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// Go to this link: https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// Copy and paste the following codes on this link page's console.
+  const category = document.querySelector(".mw-category");
+  // Select all a tags from the existing element (category) in array.
+  const links = [...category.querySelectorAll("a")];
 
-//   // Return an array of textContent from the links
-//   const streetWithDe = links.map(link => link.textContent)
-//                           .filter(streetName => streetName.includes('de'));
-//   console.log(streetWithDe);
+  // Return an array of textContent from the links
+  const streetWithDe = links.map(link => link.textContent)
+                          .filter(streetName => streetName.includes('de'));
+  console.log(streetWithDe);
