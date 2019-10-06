@@ -56,22 +56,29 @@
           return lastPerson > nextPerson ? -1 : 1;
       });
       console.table(sortYearsLived);
-  
-      // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-      const category = document.querySelector(".mw-category");
-      // Select all a tags from the existing element (category) in array.
-      const links = [...category.querySelectorAll("a")];
       
-      // Return an array of textContent from the links
-      const streetWithDe = links.map(link => link.textContent)
-                              .filter(streetName => streetName.includes('de'));
-      console.log(streetWithDe);
-  
-      // 7. sort Exercise
+      // 6. sort Exercise
+      // Use 'people' array
       // Sort the people alphabetically by last name
-  
+      const sortAlpha = people.sort((a, b) => {
+          //Separate array with first name and last name of nested array
+          const [aLast, aFirst] = a.split(', ');
+          const [bLast, bFirst] = b.split(', ');
+         return aLast > bLast ? 1 : -1;
+      });
+      console.table(sortAlpha);
+      
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-  
+      
+      //  Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    //   const category = document.querySelector(".mw-category");
+    //   // Select all a tags from the existing element (category) in array.
+    //   const links = [...category.querySelectorAll("a")];
+      
+    //   // Return an array of textContent from the links
+    //   const streetWithDe = links.map(link => link.textContent)
+    //                           .filter(streetName => streetName.includes('de'));
+    //   console.log(streetWithDe);
